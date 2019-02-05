@@ -1,0 +1,36 @@
+.container-center {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.form-center {
+    width: 100%;
+    max-width: 330px;
+}
+
+.form-center input {
+    margin-top: 1em;
+}
+
+.form-center button {
+    margin-top: 1em;
+}
+
+.top-margin {
+    margin-top: 1em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.alert {
+    margin-top: 1em;
+}

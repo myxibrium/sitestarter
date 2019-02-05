@@ -1,0 +1,33 @@
+<div class="container">
+<h1>Profile - {{currentUser.username}}</h1>
+
+{{^currentUser.verified}}
+<p>Your email has not been verified yet. This may prevent you from accessing features of the site.</p>
+{{/currentUser.verified}}
+
+{{#currentUser.verified}}
+    {{#hasPages}}
+        <h2 class="top-margin">Pages</h2>
+        <ul>
+            {{#pages}}
+                <li class="top-margin">
+                    <a href="#!/page/edit/{{id}}" class="btn btn-secondary">Edit</a>
+                    <a href="#!/page/view/{{name}}">{{title}}</a>
+                </li>
+            {{/pages}}
+        </ul>
+    {{/hasPages}}
+    <a href="#!/page/create" class="btn btn-primary">Create a Page</a>
+    {{#hasMedia}}
+        <h2 class="top-margin">Media</h2>
+        <ul>
+            {{#media}}
+            <li class="top-margin">
+                <button data-id="{{id}}" class="delete-media btn btn-warning">Delete</button>
+                <a href="/api/media/{{id}}">{{filename}}</a>
+            </li>
+            {{/media}}
+        </ul>
+    {{/hasMedia}}
+{{/currentUser.verified}}
+</div>

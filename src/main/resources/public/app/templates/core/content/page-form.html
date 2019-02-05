@@ -1,0 +1,37 @@
+<div class="container">
+<form id="page-form">
+    <button type="submit" class="btn btn-primary float-right">Save</button>
+    <div class="row">
+        <div class="col-sm">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+    <input type="hidden" id="page-id" value="{{existing.id}}" />
+    <div class="row top-margin">
+        <div class="col-sm-2">
+            <label for="page-title">Page Title</label>
+        </div>
+        <div class="col-sm">
+            <input id="page-title" class="form-control" type="text" placeholder="Page Title" value="{{existing.title}}" />
+        </div>
+    </div>
+    <div class="row top-margin">
+        <div class="col-sm-2">
+            <label for="page-name">Page Name</label>
+        </div>
+        <div class="col-sm">
+            <input id="page-name" class="form-control" type="text" placeholder="Page Name" value="{{existing.name}}" />
+        </div>
+    </div>
+    <div class="row top-margin">
+        <textarea id="page-content" title="Page Content">{{existing.mainContent}}</textarea>
+    </div>
+    <div id="page-save-alert" class="alert alert-warning hidden" role="alert">
+        An error has occurred while trying to save. All fields are required and the page name should be unique.
+    </div>
+    <a href="#!/profile" class="btn btn-secondary float-right top-margin">Cancel</a>
+    <div class="row top-margin">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
+</div>

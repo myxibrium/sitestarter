@@ -1,0 +1,26 @@
+<div class="container">
+<h1 class="text-center">Verify Email Address</h1>
+<div class="row">
+    <p>
+        You should receive an email with a verification code.
+        You may either click the link in the email directly, or enter the verification code here.
+    </p>
+</div>
+<form id="email-verification">
+    <div class="row">
+        <div class="col-sm">
+            <input type="text" id="email-verif-code" class="form-control" placeholder="Verification Code" />
+        </div>
+        <div class="col-sm">
+            <button type="submit" class="btn btn-primary">Verify Email</button>
+        </div>
+    </div>
+</form>
+
+<div id="email-verification-error" class="alert alert-warning hidden" role="alert">
+    The verification code you've entered is invalid.
+</div>
+<div id="email-verification-success" class="alert alert-success hidden" role="alert">
+    Your email has been verified successfully! Please <a href="#!/login">Login</a> to continue.
+</div>
+</div>
